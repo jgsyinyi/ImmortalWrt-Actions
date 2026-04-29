@@ -29,7 +29,7 @@ on:
 
 jobs:
   build:
-    if: ${{inputs.ssh == false && inputs.repo == 'immortalwrt'}}
+    if: ${{inputs.ssh == false}}
     runs-on: ubuntu-latest
     name: 🚀 编译 (Build)
     steps:
@@ -138,12 +138,12 @@ jobs:
             ${{inputs.repo}}/feeds.conf.default
             ${{inputs.repo}}/.config
 
-      - name: 多线程编译 ImmortalWrt (Build ImmortalWrt multithreading)
+      - name: 多线程编译 ${{inputs.repo}} (Build ${{inputs.repo}} multithreading)
         if: ${{inputs.multithreading == true}}
         working-directory: ${{inputs.repo}}
         run: make -j$(nproc) V=s
 
-      - name: 单线程编译 ${{inputs.repo}} (Build ImmortalWrt single thread)
+      - name: 单线程编译 ${{inputs.repo}} (Build ${{inputs.repo}} single thread)
         if: ${{inputs.multithreading == false}}
         working-directory: ${{inputs.repo}}
         run: make -j1 V=s
