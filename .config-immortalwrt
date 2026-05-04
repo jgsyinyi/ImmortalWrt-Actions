@@ -166,8 +166,7 @@ CONFIG_EXTERNAL_CPIO=""
 # CONFIG_TARGET_ROOTFS_TARGZ is not set
 CONFIG_PACKAGE_k3screenctrl=y
 CONFIG_PACKAGE_luci-app-k3screenctrl=y
-CONFIG_PACKAGE_luci-theme-netgear=y
-CONFIG_PACKAGE_kmod-fb-core=y
+
 #
 # Root filesystem images
 #
