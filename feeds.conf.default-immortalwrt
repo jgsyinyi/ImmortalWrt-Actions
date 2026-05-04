@@ -6,3 +6,5 @@ src-git video https://github.com/openwrt/video.git
 #src-git targets https://github.com/openwrt/targets.git
 #src-git oldpackages http://git.openwrt.org/packages.git
 #src-link custom /usr/src/openwrt/custom-feed
+src-git k3screen https://github.com/yangxu52/k3screenctrl.git
+src-git netgeartheme https://github.com/ysoyipek/luci-theme-netgear.git
